@@ -1,6 +1,6 @@
 # Dashboard Responsive (Bootstrap)
 
-Proyecto académico para construir un **dashboard responsive** usando **Bootstrap vía CDN**, cumpliendo la estructura y restricciones definidas en `docs.md`.
+Proyecto académico para construir un **dashboard responsive** usando **Bootstrap vía CDN**, cumpliendo la estructura y restricciones definidas en `docs/docs.md`.
 
 ## Tecnologías
 
@@ -11,14 +11,16 @@ Proyecto académico para construir un **dashboard responsive** usando **Bootstra
 ## Estructura del proyecto
 
 - `dashboard.html`: página principal del dashboard
-- `docs.md`: especificaciones y requisitos de la actividad
+- `docs/docs.md`: especificaciones y requisitos de la actividad
+- `html/vista-usuarios.html`: vista de usuarios (tabla + acciones)
+- `html/form-usuario.html`: formulario para crear usuario
 
 ## Cómo ejecutar
 
 1. Abrir `dashboard.html` en un navegador.
 2. No requiere servidor ni dependencias instaladas (todo está por CDN).
 
-## Especificaciones (según `docs.md`)
+## Especificaciones (según `docs/docs.md`)
 
 ### 1) NavBar superior
 
@@ -76,8 +78,21 @@ El dashboard debe ser responsive:
 - No usar frameworks adicionales
 - No usar librerías externas de diseño
 
+## Paleta de colores (background)
+
+Clases utilitarias de Bootstrap permitidas para fondos:
+
+- `.bg-light`
+- `.bg-light-subtle`
+- `.bg-dark`
+- `.bg-dark-subtle`
+- `.bg-body-secondary`
+- `.bg-body-tertiary`
+- `.bg-body`
+
 ## Estado actual (implementación)
 
-- Layout base con **sidebar + navbar + sección de cards** usando grid de Bootstrap.
-- Responsive inicial: el sidebar se muestra en columna completa en pantallas pequeñas y como columna lateral en pantallas grandes.
-- Pendiente (si aplica): vista **Usuarios** con tabla, botón “Nuevo” y formulario.
+- `dashboard.html`: layout base con navbar + sección de cards (grid de Bootstrap).
+- `html/vista-usuarios.html`: tabla responsive con acciones por fila y botón “Nuevo”.
+- `html/form-usuario.html`: campos de Nombre, Correo y Rol.
+- Pendiente (si aplica): botón “Enviar” del formulario.

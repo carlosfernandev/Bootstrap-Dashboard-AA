@@ -2,6 +2,12 @@
 
 Proyecto académico para construir un **dashboard responsive** usando **Bootstrap vía CDN**, cumpliendo la estructura y restricciones definidas en `docs/docs.md`.
 
+## Hecho por:
+
+- Orrala Arriaga Paulo
+- Patiño García Carlos Fernando
+- Villón Panimboza Ángel Alejandro
+
 ## Tecnologías
 
 - HTML5

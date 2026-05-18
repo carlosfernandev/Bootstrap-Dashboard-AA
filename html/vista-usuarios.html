@@ -12,173 +12,249 @@
     />
   </head>
   <body class="bg-body-tertiary">
-    <nav class="navbar bg-body-secondary">
-      <div class="container-fluid">
-          <strong>Panel Administrador</strong></a
-        >
-        <a class="navbar-brand"><strong>Usuario: Admin</strong></a>
+    <!-- Navbar Superior -->
+    <nav class="navbar navbar-expand-lg bg-body-secondary sticky-top shadow-sm">
+      <div class="container-fluid px-3">
+        <a href="/dashboard.html" class="navbar-brand fw-bold">Panel Administrador</a>
+        <span class="ms-auto navbar-text fw-semibold">Usuario: Admin</span>
       </div>
     </nav>
 
-    <main class="container py-3">
-      <div class="bg-body rounded p-3">
-        <div
-          class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3"
-        >
-          <h2 class="mb-0">Lista de usuarios</h2>
-          <a href="/html/form-usuario.html" class="btn btn-primary">Nuevo</a>
+    <!-- Main Content -->
+    <main class="container-fluid py-4 px-2 px-md-4">
+      <div class="bg-body rounded-3 p-3 p-md-4 shadow-sm">
+        <!-- Header con título y botón -->
+        <div class="row align-items-center mb-4 gy-3">
+          <div class="col-12 col-sm-6">
+            <h2 class="mb-0 fw-bold">Lista de Usuarios</h2>
+          </div>
+          <div class="col-12 col-sm-6 text-sm-end">
+            <a href="/html/form-usuario.html" class="btn btn-primary btn-sm">
+              <i class="bi bi-plus-circle"></i> Nuevo Usuario
+            </a>
+          </div>
         </div>
 
-        <div class="table-responsive overflow-visible">
-          <table class="table table-striped mb-0">
-            <thead>
+        <!-- Tabla Responsive -->
+        <div class="table-responsive-md">
+          <table class="table table-hover table-striped align-middle mb-0">
+            <thead class="table-light">
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Correo</th>
-                <th scope="col" class="lh-1">Estado</th>
-                <th scope="col" class="text-nowrap">Acciones</th>
+                <th scope="col" style="width: 5%;">#</th>
+                <th scope="col" style="width: 25%;">Nombre</th>
+                <th scope="col" style="width: 30%;">Correo</th>
+                <th scope="col" style="width: 15%;">Estado</th>
+                <th scope="col" class="text-center" style="width: 25%;">Acciones</th>
               </tr>
             </thead>
             <tbody>
+              <!-- Usuario 1 -->
               <tr>
-                <th scope="row">1</th>
-                <td>Carlos Patiño</td>
+                <td><span class="badge bg-secondary">1</span></td>
+                <td class="fw-semibold">Carlos Patiño</td>
                 <td>carlos@gmail.com</td>
-                <td>ACTIVO</td>
-                <td>
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary"
-                      type="button"
-                      id="menuContextual"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      °°°
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="menuContextual">
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="/html/vista-usuarios.html"
-                          >Editar</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a
-                          class="dropdown-item text-danger"
-                          href="/html/vista-usuarios.html"
-                          >Eliminar</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
+                <td><span class="badge bg-success">ACTIVO</span></td>
+                <td class="text-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Ver opciones">
+                    <div class="dropdown d-inline-block">
+                      <button
+                        class="btn btn-outline-secondary btn-sm rounded-3 px-3 py-1 shadow-sm"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="Acciones"
+                      >
+                        ⋯
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <i class="bi bi-pencil"></i> Editar
+                          </a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item text-danger" href="#">
+                            <i class="bi bi-trash"></i> Eliminar
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
                 </td>
               </tr>
+              <!-- Usuario 2 -->
               <tr>
-                <th scope="row">2</th>
-                <td>Paulo Orrala</td>
+                <td><span class="badge bg-secondary">2</span></td>
+                <td class="fw-semibold">Paulo Orrala</td>
                 <td>paulo@gmail.com</td>
-                <td>ACTIVO</td>
-                <td>
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary"
-                      type="button"
-                      id="menuContextual"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      °°°
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="menuContextual">
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="/html/vista-usuarios.html"
-                          >Editar</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a
-                          class="dropdown-item text-danger"
-                          href="/html/vista-usuarios.html"
-                          >Eliminar</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
+                <td><span class="badge bg-success">ACTIVO</span></td>
+                <td class="text-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Ver opciones">
+                    <div class="dropdown d-inline-block">
+                      <button
+                        class="btn btn-outline-secondary btn-sm rounded-3 px-3 py-1 shadow-sm"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        ⋯
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <i class="bi bi-pencil"></i> Editar
+                          </a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item text-danger" href="#">
+                            <i class="bi bi-trash"></i> Eliminar
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
                 </td>
               </tr>
+              <!-- Usuario 3 -->
               <tr>
-                <th scope="row">3</th>
-                <td>Angel Villón</td>
+                <td><span class="badge bg-secondary">3</span></td>
+                <td class="fw-semibold">Angel Villón</td>
                 <td>angel@gmail.com</td>
-                <td>INACTIVO</td>
-                <td>
-                  <div class="dropdown">
-                    <button
-                      class="btn btn-secondary"
-                      type="button"
-                      id="menuContextual"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
-                    >
-                      °°°
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="menuContextual">
-                      <li>
-                        <a
-                          class="dropdown-item"
-                          href="/html/vista-usuarios.html"
-                          >Editar</a
-                        >
-                      </li>
-                      <li><hr class="dropdown-divider" /></li>
-                      <li>
-                        <a
-                          class="dropdown-item text-danger"
-                          href="/html/vista-usuarios.html"
-                          >Eliminar</a
-                        >
-                      </li>
-                    </ul>
-                  </div>
+                <td><span class="badge bg-danger">INACTIVO</span></td>
+                <td class="text-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Ver opciones">
+                    <div class="dropdown d-inline-block">
+                      <button
+                        class="btn btn-outline-secondary btn-sm rounded-3 px-3 py-1 shadow-sm"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="Acciones"
+                      >
+                        ⋯
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <i class="bi bi-pencil"></i> Editar
+                          </a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item text-danger" href="#">
+                            <i class="bi bi-trash"></i> Eliminar
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
+                </td>
+              </tr>
+              <!-- Usuario 4 -->
+              <tr>
+                <td><span class="badge bg-secondary">4</span></td>
+                <td class="fw-semibold">María González</td>
+                <td>maria@gmail.com</td>
+                <td><span class="badge bg-success">ACTIVO</span></td>
+                <td class="text-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Ver opciones">
+                    <div class="dropdown d-inline-block">
+                      <button
+                        class="btn btn-outline-secondary btn-sm rounded-3 px-3 py-1 shadow-sm"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="Acciones"
+                      >
+                        ⋯
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <i class="bi bi-pencil"></i> Editar
+                          </a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item text-danger" href="#">
+                            <i class="bi bi-trash"></i> Eliminar
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
+                </td>
+              </tr>
+              <!-- Usuario 5 -->
+              <tr>
+                <td><span class="badge bg-secondary">5</span></td>
+                <td class="fw-semibold">Juan Rodríguez</td>
+                <td>juan@gmail.com</td>
+                <td><span class="badge bg-success">ACTIVO</span></td>
+                <td class="text-center">
+                  <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="Ver opciones">
+                    <div class="dropdown d-inline-block">
+                      <button
+                        class="btn btn-outline-secondary btn-sm rounded-3 px-3 py-1 shadow-sm"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        title="Acciones"
+                      >
+                        ⋯
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                          <a class="dropdown-item" href="#">
+                            <i class="bi bi-pencil"></i> Editar
+                          </a>
+                        </li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li>
+                          <a class="dropdown-item text-danger" href="#">
+                            <i class="bi bi-trash"></i> Eliminar
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </span>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="d-flex justify-content-center mt-4">
-          <!-- Button trigger modal -->
-          <button
-            type="button"
-            class="btn btn-primary"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
-          >
-            Volver al inicio
-          </button>
+
+        <!-- Botón de acción -->
+        <div class="text-center mt-4 pt-3">
+          <span data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Regresar al panel principal">
+            <button
+              type="button"
+              class="btn btn-outline-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#confirmModal"
+            >
+              Volver al Inicio
+            </button>
+          </span>
         </div>
       </div>
 
-      <!-- Modal -->
+      <!-- Modal de Confirmación -->
       <div
         class="modal fade"
-        id="staticBackdrop"
+        id="confirmModal"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabindex="-1"
-        aria-labelledby="staticBackdropLabel"
+        aria-labelledby="confirmModalLabel"
         aria-hidden="true"
       >
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            <div class="modal-header bg-light">
+              <h1 class="modal-title fs-5 fw-bold" id="confirmModalLabel">
                 ¿Volver al menú principal?
               </h1>
               <button
@@ -188,8 +264,10 @@
                 aria-label="Close"
               ></button>
             </div>
-            <div class="modal-body">Guarde sus cambios antes de salir</div>
-            <div class="modal-footer">
+            <div class="modal-body">
+              Guarde sus cambios antes de salir
+            </div>
+            <div class="modal-footer gap-2">
               <button
                 type="button"
                 class="btn btn-secondary"
@@ -197,12 +275,15 @@
               >
                 Cancelar
               </button>
-              <a href="/dashboard.html" class="btn btn-primary">Confirmar</a>
+              <a href="/dashboard.html" class="btn btn-primary">
+                Confirmar
+              </a>
             </div>
           </div>
         </div>
       </div>
     </main>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
